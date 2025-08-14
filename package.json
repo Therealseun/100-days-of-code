@@ -1,0 +1,14 @@
+{
+  "name": "contact-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/sendMail.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  },
+  "engines": {
+    "node": ">=16.x"
+  }
+}
