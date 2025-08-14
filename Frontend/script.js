@@ -28,5 +28,6 @@ form.addEventListener("submit", async (e) => {
     form.reset();
   } catch (error) {
     alert("Oops! Something went wrong.");
+    console.error(err);
   }
 });
