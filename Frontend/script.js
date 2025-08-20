@@ -16,18 +16,21 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await response.json();
-
-    alert(data.message || "Message sent!");
-    form.reset();
-  } catch (error) {
-    alert("Oops! Something went wrong.");
-    console.error(err);
-  }
+    const response = await fetch('/api/sendEmail', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value
+  })
+})
+.then(res => res.json())
+.then(data => {
+  alert('Email sent!');
+})
+.catch(err => {
+  alert('Failed to send email');
 });

@@ -21,11 +21,12 @@ export default async function handler(req, res) {
   });
 
   const mailOptions = {
-    from: `"name" <{email}>`,
-    to: process.env.EMAIL_USER, // your receiving email address
-    subject: "New Contact Form Message",
-    text: `Name: name:{email}\n\nMessage:\n${message}`,
-  };
+  from: `"name" <{email}>`,
+  to: process.env.EMAIL_USER,
+  subject: "New Contact Form Message",
+  text: `Name: name:{email}\n\nMessage:\n${message}`,
+};
+
 
   try {
     await transporter.sendMail(mailOptions);
