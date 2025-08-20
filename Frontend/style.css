@@ -119,3 +119,21 @@ body.dark .contact textarea {
   color: #f9f9f9;
   border: 1px solid #444;
 }
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
